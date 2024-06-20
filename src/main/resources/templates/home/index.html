@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Edgar's Most Excellent AEM Replacement App</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+<div layout:fragment="content">
+    <h1 class="mb-4">[[#{home.index.headline}]]</h1>
+    <p><span>[[#{home.index.text}]]</span>
+    </p>
+    <p>
+    <ul>
+        <li><a th:href="@{/swagger-ui.html}" target="_blank">[[#{home.index.swagger}]]</a></li>
+        <li><a th:href="@{/forms?state=az&type=buyer}">AZ Buyers</a></li>
+        <li><a th:href="@{/forms?state=az&type=seller}">AZ Sellers</a></li>
+        <li><a th:href="@{/forms?state=tx&type=buyer}">TX Buyers</a></li>
+        <li><a th:href="@{/forms?state=tx&type=seller}">TX Sellers</a></li>
+    </ul>
+    </p>
+    <p>Most of the work here is using the following technologies</p>
+    <p>
+    <ul>
+        <li><a href="https://www.thymeleaf.org/doc/tutorials/3.1/thymeleafspring.html">ThymeLeaf</a></li>
+        <li><a href="https://spring.io/guides">Spring Boott</a></li>
+    </ul>
+    </p>
+</div>
+</body>
+</html>

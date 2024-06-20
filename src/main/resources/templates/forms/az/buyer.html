@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>I'm a Buyer!</title>
+</head>
+
+<body>
+<div layout:fragment="content">
+    <h1>I'm a Buyer!</h1>
+    <h2>
+        <p>[[${user.firstName}]] [[${user.lastName}]]</p></h2>
+    <p>I am a [[${user.occupation}]]</p>
+    <p>Call me at [[${user.phoneNumber}]]</p>
+    <p>My hobbies are:</p>
+    <ul th:each="hobby: ${user.hobbies}">
+        <li th:text="${hobby}">
+        </li>
+    </ul>
+
+</div>
+</body>
+</html>
